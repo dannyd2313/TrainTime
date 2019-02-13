@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Chuggington Train Times</title>
+	<!-- Firebase -->
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+
+<body class="main-body">
+	<div class="container">
+		<!-- <div class="bg">
+		<img src="assets/images/back.jpg" alt="Chuggington Tracks">
+		</div> -->
+		<div class="jumbotron">
+			<h1 class="display-3">World Trak </h1>
+			<!-- <img src="assets/images/ChuggingtonLogo.png" alt="Chuggington Tracks"> -->
+			<p class="lead">The first crosworld train, serving you kindly since 2075!</p>
+			<!-- <hr class="m-y-md"> -->
+			<p class="create">Add a destination or find the next aailable train to your destination </p>
+			<!-- close jumbotron -->
+		</div>
+		<div class="panel panel-default panel-transparent">
+			<div class="panel-heading">
+				<h3 class="panel-title">Current Train Schedule</h3>
+				<!-- close panel heading -->
+			</div>
+			<div class="panel-body">
+				<div class="table-responsive">
+					<table class="table trainSchedule">
+						<thead>
+							<tr>
+								<th>Train Name</th>
+								<th>Destination</th>
+								<th>Frequency</th>
+								<th>Next Arrival</th>
+								<th>Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody id="trainresults">
+							<tr>
+								<td></td>
+								<td id="destination"></td>
+								<td id="frequency"></td>
+								<td id="next"></td>
+								<td id="away"></td>
+							</tr>
+						</tbody>
+					</table>
+					<!-- Close Table-Responsive -->
+				</div>
+				<!-- Close panel body -->
+			</div>
+			<!-- Close Panel -->
+		</div>
+
+	<div class="row">
+		<!-- New Train-->
+		<div class="col-lg-6" id="addtrain">
+				<div class="panel panel-default panel-transparent panel-responsive">
+					<div class="panel-heading">
+						<h3 class="panel-title">Clickity Clack! Add a New Train on the Track!</h3>
+						<!-- end panel heading -->
+					</div>
+					<div class="panel-body">
+						<!-- Form -->
+						<form role="form">
+							<div class="form-group">
+								<label for="text">Train Name:</label>
+								<input type="text" class="form-control" id="newName">
+							</div>
+							<div class="form-group">
+								<label for="text">Destination:</label>
+								<input type="text" class="form-control" id="newDestination">
+							</div>
+							<div class="form-group">
+								<label for="text">First Train Time: (HH:mm)</label>
+								<input type="time" class="form-control" id="newTime">
+							</div>
+							<div class="form-group">
+								<label for="frequency">Frequency: (minutes)</label>
+								<input type="number" class="form-control" id="newFreq">
+							</div>
+							<button class="btn btn-lg" id="addTrain">Submit</button>
+						</form>
+						<!-- end panel -->
+					</div>
+					<!-- end col -->
+			</div>
+				<!-- end row -->
+		</div>
+			<!-- end container -->
+	</div>
+
+	</div>
+	<!-- JQuery-->
+	<script src="https://code.jquery.com/jquery-3.1.0.min.js"
+	integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+	<!-- Moment JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.0/moment.min.js"></script>
+	<!-- Bootstrap JS -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+	integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+	crossorigin="anonymous"></script>
+	<!-- Javascript -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+
+</html>
